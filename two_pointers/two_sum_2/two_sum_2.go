@@ -1,6 +1,6 @@
-package two_pointers
+package two_sum_2
 
-func TwoSum2(input []int, target int) ([2]int) {
+func Solve(input []int, target int) ([2]int) {
 	left, right := 0, len(input)-1
 
 	for left < right {

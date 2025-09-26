@@ -1,4 +1,4 @@
-package two_pointers
+package two_sum_2
 
 import (
 	"testing"
@@ -16,9 +16,9 @@ var testCases = []TestCase{
 	{Input: []int{3, 8, 15, 35, 43, 46, 48, 52}, Target: 87, Output: [2]int{4, 8}},
 }
 
-func TestTwoSum(t *testing.T) {
+func TestSolve(t *testing.T) {
 	for _, tc := range testCases {
-		op := TwoSum2(tc.Input, tc.Target)
+		op := Solve(tc.Input, tc.Target)
 
 		if tc.Output[0] != op[0] {
 			t.Errorf(`Output[0] %d doesn't match expected %d`, op[0], tc.Output[0])
