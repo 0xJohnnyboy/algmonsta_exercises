@@ -25,7 +25,7 @@ func TestSolve(t *testing.T) {
 	for _, tc := range testCases {
 		op := Solve(tc.Nums, tc.K)
 
-		if math.Abs(op - tc.Expected) > 1e-5 {
+		if math.Abs(op-tc.Expected) > 1e-5 {
 			t.Errorf("❌ | Input: %v with k:%v\nOutput: %v; expected %v \n", tc.Nums, tc.K, op, tc.Expected)
 		}
 	}

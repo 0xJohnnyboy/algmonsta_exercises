@@ -1,7 +1,7 @@
 package sort_colors
 
 func Solve(i []int) []int {
-	r, w, b := 0, 0, len(i) -1
+	r, w, b := 0, 0, len(i)-1
 	red, white, blue := 0, 1, 2
 
 	for w <= b {

@@ -5,7 +5,7 @@ import (
 )
 
 type TestCase struct {
-	Input  string
+	Input    string
 	Expected bool
 }
 
@@ -22,7 +22,7 @@ func TestSolve(t *testing.T) {
 		op := Solve(tc.Input)
 
 		if tc.Expected != op {
-		t.Errorf(`Output: %v; expected %v`, op, tc.Expected)
+			t.Errorf(`Output: %v; expected %v`, op, tc.Expected)
 			return
 		}
 	}

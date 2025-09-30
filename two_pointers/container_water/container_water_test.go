@@ -23,7 +23,7 @@ func TestSolve(t *testing.T) {
 		op := Solve(tc.Input)
 
 		if op != tc.Expected {
-			t.Errorf("Input: %v\nOutput: %v; expected %v \n",tc.Input, op, tc.Expected)
+			t.Errorf("Input: %v\nOutput: %v; expected %v \n", tc.Input, op, tc.Expected)
 		}
 	}
 }

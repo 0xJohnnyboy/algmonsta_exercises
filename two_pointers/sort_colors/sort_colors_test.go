@@ -25,7 +25,7 @@ func TestSolve(t *testing.T) {
 		op := Solve(tc.Input)
 
 		if ok := areSlicesEqual(tc.Expected, op); !ok {
-			t.Errorf("Input was: %v; Output: %v; expected %v \n",tc.Input, op, tc.Expected)
+			t.Errorf("Input was: %v; Output: %v; expected %v \n", tc.Input, op, tc.Expected)
 		}
 	}
 }
