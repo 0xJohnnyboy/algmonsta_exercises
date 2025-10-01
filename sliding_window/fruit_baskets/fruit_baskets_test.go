@@ -1,6 +1,7 @@
 package fruit_baskets
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -22,10 +23,13 @@ var testCases = []TestCase{
 
 func TestSolve(t *testing.T) {
 	for _, tc := range testCases {
-		op := Solve(tc.Input)
+		description := fmt.Sprintf("should solve the exercice with input %v, expects %v", tc.Input, tc.Expected)
+		t.Run(description, func(t *testing.T) {
+			op := Solve(tc.Input)
 
-		if op != tc.Expected {
-			t.Errorf("❌ | Input: %v, Output: %v; expected %v \n", tc.Input, op, tc.Expected)
-		}
+			if op != tc.Expected {
+				t.Errorf("❌ | Output: %v; expected %v \n", op, tc.Expected)
+			}
+		})
 	}
 }
